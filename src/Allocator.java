@@ -40,7 +40,7 @@ public class Allocator {
         			 removeAllocatedDevice(firstElement, devicesFirstFase);
         		 }
         	 }
-        	 if(k > 9) k = 0;
+        	 if(k >= 9) k = 0;
         	 else k++;
         }
 	}
