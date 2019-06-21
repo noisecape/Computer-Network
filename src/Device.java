@@ -52,17 +52,7 @@ public class Device {
     public int getAllocatedResource(){
         return this.resourcesAssigned;
     }
-    
-    @Override
-    public boolean equals(Object o) {
-    	if (this == o) {
-    		return true;
-    	}
-    	else {
-    		return false;
-    	}
-    }
-    
+
     @Override
     public String toString() {
     	return (" (x: " + this.getX() + " y: " + this.getY() + ") resources assigned:" + this.getAllocatedResource());
