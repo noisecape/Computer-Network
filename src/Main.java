@@ -7,16 +7,6 @@ public class Main {
     public static void main(String[] args) {
         Main m = new Main();
 
-        Resource r1 = new Resource(1,2);
-        Resource r2 = new Resource(1,3);
-        Resource r3 = new Resource( 5, 6);
-        Resource r4 = new Resource(1,2);
-
-        Device d1 = new Device(2,2, 1);
-        Device d2 = new Device(2,2, 5);
-        Device d3 = new Device(2,2, 2);
-        Device d4 = new Device(2,7, 1);
-
         Random random = new Random();
         LinkedList<Resource> resources = m.createResources(random);
         List<Device> devices = m.createDevices(random);
