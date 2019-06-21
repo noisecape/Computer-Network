@@ -44,7 +44,7 @@ public class Resource {
       return requests.getFirst();
     }
     	
-    public void UpdateRequests() {
+    public void updateRequests() {
     	requests.clear();
     }
     

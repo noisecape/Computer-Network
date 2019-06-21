@@ -36,7 +36,7 @@ public class Allocator {
         		 if(!r.isEmpty()) {
         			 Device firstElement = r.getMaxPriorityDevice();
         			 firstElement.allocateResource();
-        			 r.UpdateRequests();
+        			 r.updateRequests();
         			 removeAllocatedDevice(firstElement, devicesFirstFase);
         		 }
         	 }
@@ -53,7 +53,7 @@ public class Allocator {
         	Resource r = resources.get(random.nextInt(resources.size()));
         	r.setRequests(d);
         	d.allocateResource();
-        	r.UpdateRequests();
+        	r.updateRequests();
         	removeAllocatedDevice(d, devices);
         	System.out.println("Round-> " + Integer.toString(i++) + d.toString());
         }
