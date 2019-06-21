@@ -55,7 +55,7 @@ public class Allocator {
         	d.allocateResource();
         	r.updateRequests();
         	removeAllocatedDevice(d, devices);
-        	System.out.println("Round-> " + Integer.toString(i++) + d.toString());
+        	System.out.println("Fase 2, Round -> " + Integer.toString(i++) + d.toString());
         }
 	}
 	
