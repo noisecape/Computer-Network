@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         Main m = new Main();
 
-        System.out.println("CIAO");
 
         Random random = new Random();
         LinkedList<Resource> resources = m.createResources(random);
