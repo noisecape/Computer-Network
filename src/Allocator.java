@@ -28,11 +28,9 @@ public class Allocator {
         List<Device> devicesFirstFase = cloneDevices(devices);
         
         while(!devicesFirstFase.isEmpty()) {
-        	 for(Device d: devices){
-        		 if(d.getAllocatedResource() == 0){
-        			 Resource resource = d.getElement(k);
-        			 resource.setRequests(d);
-        		 }
+        	 for(Device d: devicesFirstFase){
+        	 	Resource resource = d.getElement(k);
+        	 	resource.setRequests(d);
              }
         	 for (Resource r: resources) {
         		 if(!r.isEmpty()) {
