@@ -6,13 +6,11 @@ public class Resource {
     private int y;
     private LinkedList<Device> requests;
     private double distance;
-    private int c;
 
     Resource(int x, int y){
         this.x = x;
         this.y = y;
         this.requests = new LinkedList<>();
-        this.c = 0;
     }
 
     public int getX() {
@@ -24,10 +22,7 @@ public class Resource {
     }
 
     public void setRequests(Device device){
-        if(device.getAllocatedResource() == 0){
-            this.requests.add(device);
-            c++;
-        }
+        this.requests.add(device);
     }
 
     public void setDistance(double distance) {
@@ -36,5 +31,24 @@ public class Resource {
 
     public double getDistance() {
         return distance;
+    }
+    
+    public int getNumberElements() {
+    	return requests.size();
+    }
+    
+    public Device getMaxPriorityDevice() {
+    	if (requests.size() > 1) {
+    		requests.sort(new CompareByPriority());
+    	}
+      return requests.getFirst();
+    }
+    	
+    public void updateRequests() {
+    	requests.clear();
+    }
+    
+    public boolean isEmpty() {
+    	return requests.isEmpty();
     }
 }

@@ -6,7 +6,7 @@ public class Device {
     private int x;
     private int y;
     private int priority;
-    private LinkedList<Resource> chart;
+    private List<Resource> chart;
     private int resourcesAssigned;
 
     Device(int x, int y, int priority){
@@ -35,8 +35,8 @@ public class Device {
         }
     }
 
-    public Resource getFirstElement() {
-        return this.chart.getFirst();
+    public Resource getElement(int k) {
+        return this.chart.get(k);
     }
 
     public void addElement(Resource resource) {
@@ -51,5 +51,10 @@ public class Device {
 
     public int getAllocatedResource(){
         return this.resourcesAssigned;
+    }
+
+    @Override
+    public String toString() {
+    	return (" (x: " + this.getX() + " y: " + this.getY() + ") resources assigned:" + this.getAllocatedResource());
     }
 }
